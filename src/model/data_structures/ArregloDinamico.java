@@ -23,7 +23,6 @@ public class ArregloDinamico<T extends Comparable<T>>  implements IArregloDinami
 	 */
 	private T elementos[ ];
 
-	private Class<T> t;
 	/**
 	 * Construir un arreglo con la capacidad maxima inicial.
 	 * @param max Capacidad maxima inicial
@@ -72,7 +71,7 @@ public class ArregloDinamico<T extends Comparable<T>>  implements IArregloDinami
 		// Recomendacion: Usar el criterio de comparacion natural (metodo compareTo()) definido en Strings.
 		T toFind = null;
 		for (T t: elementos){
-			if (t.compareTo(dato)==0){
+			if ( t!=null && t.compareTo(dato)==0){
 				toFind=t;
 				break;
 			}
@@ -86,7 +85,7 @@ public class ArregloDinamico<T extends Comparable<T>>  implements IArregloDinami
 		T este = null;
 		for(int i =0; i< elementos.length; i++)
 		{
-			if (elementos[i].compareTo(dato)==0)
+			if (elementos[i]!=null && elementos[i].compareTo(dato)==0)
 			{
 				este = elementos[i];
 			}
