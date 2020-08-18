@@ -31,23 +31,35 @@ public class TestModelo {
 	@Test
 	public void testDarTamano() {
 		// TODO
+		setUp2();
+		assertTrue(modelo!=null);
+		assertEquals(100,modelo.darTamano());
 	}
 
 	@Test
 	public void testAgregar() {
 		// TODO Completar la prueba
+		assertTrue(modelo!=null);
+		String dato = "Esto es un dato";
+		modelo.agregar(dato);
+		assertTrue(modelo.darTamano()>0);
+		assertTrue(modelo.buscar(dato)!=null);
 	}
 
 	@Test
 	public void testBuscar() {
 		setUp2();
-		// TODO Completar la prueba
+		String dato = "3";
+		assertTrue(modelo.buscar(dato)!=null);
 	}
 
 	@Test
 	public void testEliminar() {
 		setUp2();
-		// TODO Completar la prueba
+//		// TODO Completar la prueba
+		String dato = "3";
+		assertTrue(modelo.eliminar(dato)!=null);
+		assertTrue(modelo.buscar(dato)==null);
 		
 	}
 
