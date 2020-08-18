@@ -63,7 +63,7 @@ public class ArregloDinamico<T extends Comparable<T>>  implements IArregloDinami
 	public T darElemento(int i) {
 		// TODO implementar
 
-		return (T) elementos[i];
+		return elementos[i];
 	}
 
 	public T buscar(T dato) {

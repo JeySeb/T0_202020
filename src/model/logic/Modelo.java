@@ -7,7 +7,8 @@ import model.data_structures.IArregloDinamico;
  * Definicion del modelo del mundo
  *
  */
-public class Modelo {
+@SuppressWarnings("hiding")
+public class Modelo<Integer extends Comparable<Integer>>{
 	/**
 	 * Atributos del modelo del mundo
 	 */
