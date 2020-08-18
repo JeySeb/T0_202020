@@ -9,13 +9,13 @@ import org.junit.Test;
 
 public class TestArregloDinamico {
 
-	private ArregloDinamico<Integer> arreglo;
+	private ArregloDinamico arreglo;
 	private static int TAMANO=100;
 	
 	@Before
 	public void setUp1() {
 		System.out.println("Shegué acá");
-		arreglo= new ArregloDinamico<Integer>(TAMANO);
+		arreglo= new ArregloDinamico(TAMANO);
 	}
 
 	public void setUp2() {
