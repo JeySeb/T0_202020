@@ -14,6 +14,7 @@ public class TestModelo {
 	@Before
 	public void setUp1() {
 		modelo= new Modelo(CAPACIDAD);
+		System.out.println("Llegué aca 1");
 	}
 
 	public void setUp2() {
@@ -31,23 +32,38 @@ public class TestModelo {
 	@Test
 	public void testDarTamano() {
 		// TODO
+		setUp2();
+		assertTrue(modelo!=null);
+		assertEquals(100,modelo.darTamano());
 	}
 
 	@Test
 	public void testAgregar() {
 		// TODO Completar la prueba
+		assertTrue(modelo!=null);
+		int dato = 2020;
+		modelo.agregar(dato);
+		assertTrue(modelo.darTamano()>0);
+		assertTrue(modelo.buscar(dato)!=null);
 	}
 
 	@Test
 	public void testBuscar() {
 		setUp2();
-		// TODO Completar la prueba
+		int dato = 3;
+		assertTrue(modelo.buscar(dato)!=null);
 	}
 
 	@Test
 	public void testEliminar() {
 		setUp2();
-		// TODO Completar la prueba
+//		// TODO Completar la prueba
+		int dato = 1;
+		System.out.println(modelo.darTamano());
+		assertTrue(modelo.eliminar(dato)!=null);
+		System.out.println(modelo.darTamano());
+		assertEquals(modelo.darTamano(),CAPACIDAD-1);
+		assertTrue(modelo.buscar(dato)==null);
 		
 	}
 

@@ -2,16 +2,16 @@ package view;
 
 import model.logic.Modelo;
 
-public class View 
+public class View
 {
 	    /**
 	     * Metodo constructor
 	     */
 	    public View()
 	    {
-	    	
+
 	    }
-	    
+
 		public void printMenu()
 		{
 			System.out.println("1. Crear Arreglo Dinamico de Strings");
@@ -26,10 +26,15 @@ public class View
 		public void printMessage(String mensaje) {
 
 			System.out.println(mensaje);
-		}		
-		
+		}
+
 		public void printModelo(Modelo modelo)
 		{
 			// TODO implementar
+			int tam = modelo.darTamano();
+			for(int i=0; i<tam; i++)
+			{
+				printMessage(" "+modelo.datos.darElemento(i));
+			}
 		}
 }

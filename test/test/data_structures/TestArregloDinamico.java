@@ -14,12 +14,11 @@ public class TestArregloDinamico {
 	
 	@Before
 	public void setUp1() {
-		System.out.println("Shegué acá");
 		arreglo= new ArregloDinamico(TAMANO);
 	}
 
 	public void setUp2() {
-		for(Integer i =0; i< TAMANO*2; i++){
+		for(int i =0; i< TAMANO*2; i++){
 			arreglo.agregar(i);
 		}
 	}
@@ -27,12 +26,19 @@ public class TestArregloDinamico {
 	@Test
 	public void testArregloDinamico() {
 		// TODO
+		assertTrue(arreglo!=null);
+		assertEquals(arreglo.darCapacidad(),100);
+		assertEquals(arreglo.darTamano(),0);
 	}
 
 	@Test
 	public void testDarElemento() {
 		setUp2();
 		// TODO
+		assertEquals(arreglo.darCapacidad(),200);
+		assertEquals(arreglo.darTamano(),200);
+		assertEquals(arreglo.darElemento(199),199);
+		
 	}
 
 }

@@ -12,7 +12,7 @@ public class Modelo{
 	/**
 	 * Atributos del modelo del mundo
 	 */
-	private IArregloDinamico datos;
+	public IArregloDinamico datos;
 	
 	/**
 	 * Constructor del modelo del mundo con capacidad predefinida
