@@ -11,8 +11,8 @@ public class Modelo {
 	/**
 	 * Atributos del modelo del mundo
 	 */
-	private IArregloDinamico datos;
-	
+	public IArregloDinamico datos;
+
 	/**
 	 * Constructor del modelo del mundo con capacidad predefinida
 	 */
@@ -20,7 +20,7 @@ public class Modelo {
 	{
 		datos = new ArregloDinamico(7);
 	}
-	
+
 	/**
 	 * Constructor del modelo del mundo con capacidad dada
 	 * @param tamano
@@ -29,9 +29,9 @@ public class Modelo {
 	{
 		datos = new ArregloDinamico(capacidad);
 	}
-	
+
 	/**
-	 * Servicio de consulta de numero de elementos presentes en el modelo 
+	 * Servicio de consulta de numero de elementos presentes en el modelo
 	 * @return numero de elementos presentes en el modelo
 	 */
 	public int darTamano()
@@ -44,10 +44,10 @@ public class Modelo {
 	 * @param dato
 	 */
 	public void agregar(String dato)
-	{	
+	{
 		datos.agregar(dato);
 	}
-	
+
 	/**
 	 * Requerimiento buscar dato
 	 * @param dato Dato a buscar
@@ -57,7 +57,7 @@ public class Modelo {
 	{
 		return datos.buscar(dato);
 	}
-	
+
 	/**
 	 * Requerimiento eliminar dato
 	 * @param dato Dato a eliminar
